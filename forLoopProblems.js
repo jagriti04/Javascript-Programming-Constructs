@@ -33,3 +33,13 @@ const prompt = require('prompt-sync')();
         console.log(num + " is prime number - " + isPrime);
     }
 }
+
+// Problem 5- find factorial
+{
+    const num = parseInt(prompt("Enter a number to find factorial: "));
+    let factorial = 1;
+    for (let i = 1; i <= num; i++) {
+        factorial = factorial * i;
+    }
+    console.log("factorial of " + num + " is " + factorial);
+}
