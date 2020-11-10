@@ -16,7 +16,7 @@
     console.log("Maximum value is- " + maxValue);
 }
 
-const prompt = require('prompt-sync')({sigint: true});
+const prompt = require('prompt-sync')({ sigint: true });
 // Problem 2 -Day and month range check
 {
     let month = prompt('Enter a month: ');
@@ -49,4 +49,16 @@ const prompt = require('prompt-sync')({sigint: true});
         }
     }
     console.log("Is the given year a leap year- " + isLeapYear);
+}
+
+// Problem 4 - check if HEADS or TAILS
+{
+    const HEADS = 0;
+    let outcome = Math.floor(Math.random() * 10) % 2;
+
+    if (outcome == HEADS) {
+        console.log("Outcome is HEADS");
+    } else {
+        console.log("Outcome is TAILS");
+    }
 }
