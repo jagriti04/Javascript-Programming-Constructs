@@ -27,3 +27,25 @@ const prompt = require('prompt-sync')({ sigint: true });
     }
     console.log("Number of heads won-" + headsWin + " Number of tails won- " + tailsWin);
 }
+
+// Problem 4 - Bets
+{
+    const WINS = 1;
+    let totalMoney = 100;
+    let countWon = 0;
+    let countTotal = 0;
+
+    while(totalMoney <= 200 && totalMoney >= 0) {
+        let outcome = Math.floor(Math.random() * 10) % 2;
+        let betMoney = 1;
+        if (outcome == WINS) {
+            totalMoney = totalMoney + 2*betMoney;
+            countWon++;
+        } else {
+            totalMoney = totalMoney - 2*betMoney;
+        }
+        countTotal++;
+        console.log("total money- "+ totalMoney);
+    }
+    console.log("Won - " + countWon+ " Total- "+ countTotal + " Final money: "+totalMoney);
+}
