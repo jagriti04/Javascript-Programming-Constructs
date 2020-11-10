@@ -43,3 +43,16 @@ const prompt = require('prompt-sync')();
     else if (number == 7)
         console.log("day is: Saturday");
 }
+
+// Problem 3 
+{
+    let number = prompt("Enter any of 1, 10, 100, 1000 ---- ");
+    if (number == 1)
+        console.log("unit");
+    else if (number == 10)
+        console.log("ten");
+    else if (number == 100)
+        console.log("hundred");
+    else if (number == 1000)
+        console.log("thousand");
+}
