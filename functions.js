@@ -33,3 +33,23 @@ function getDegC(degF) {
             break;
     }
 }
+
+// function to check if two numbers palindrome
+function checkIfTwoNumbersPalindrome(number1, number2) {
+    if(number1 == getReverse(number1) && number2 == getReverse(number2)) {
+        console.log("Both are palindrome")
+        return true;
+    }
+    return false;
+}
+
+// get reverse of a number
+function getReverse(number) {
+    number = number + "";
+	return number.split("").reverse().join("");
+}
+
+{
+    console.log("Numbers- 1221, 121 " + checkIfTwoNumbersPalindrome(1221, 1221));
+    console.log("Numbers- 123, 321 " + checkIfTwoNumbersPalindrome(123, 321));
+}
