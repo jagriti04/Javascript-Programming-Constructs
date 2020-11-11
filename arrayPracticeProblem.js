@@ -32,12 +32,36 @@ function findSecondMinWithoutSorting(array) {
         sortArray[i] = Math.floor(Math.random() * 900) + 100;
     }
     console.log("Array is (with sorting)- " + sortArray);
-    findSecondMaxMinWithSorting(sortArray); 
+    findSecondMaxMinWithSorting(sortArray);
 }
 
 function findSecondMaxMinWithSorting(array) {
     array.sort();
-    console.log("sorted array "+array);
+    console.log("sorted array " + array);
     console.log("Second largest num is- " + array[8]);
     console.log("Second smallest num is- " + array[1]);
 }
+
+// Problem 3 - prime factors in array
+function isPrimeNum(num) {
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i == 0)
+            return false;
+    }
+    return true;
+}
+
+function getPrimeFactors(num) {
+    let factorsArray = [];
+    for (let i = 2; i <= num; i++) {
+        while (isPrimeNum(i) && num % i == 0) {
+            if (!factorsArray.includes(i))
+                factorsArray.push(i);
+            num /= i;
+        }
+    }
+    return factorsArray;
+}
+
+console.log("Prime factors of 323- "+ getPrimeFactors(323));
+console.log("Prime factors of 75- "+ getPrimeFactors(75));
